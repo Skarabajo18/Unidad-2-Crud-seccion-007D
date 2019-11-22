@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'books_cbv:book_list' %}">Libros</a>: Borrar?</h2>
+
+<form method="post">{% csrf_token %}
+    Estas Seguro que deseas borrar? "{{ object }}" ?<br>
+    <input type="submit" value="Delete" />
+</form>
+
+{% endblock %}
